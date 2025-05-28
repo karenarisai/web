@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbe3b5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #837eb1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav a {
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #ddd;
+  border-radius: 6px;
+  color: #333;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav a:hover {
+  background-color: #bbb;
+  color: white;
+}
+
+.nav a:active {
+  background-color: #999;
+  transform: scale(0.97);
+}
+
+.nav .active {
+  background-color: #555;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* Sección del juego */
+.game {
+  text-align: center;
+  margin: 50px auto;
+  background: #dbe3b5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+
+h1 {
+  color: #4e3ec3;
+}
+
+#equation {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#options button {
+  background-color: #f66a94;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background-color: #f66a94;
+  transform: scale(1.1);
+}
+
+/* Botón de reinicio */
+.restart-btn {
+  background-color: #f66a94;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.restart-btn:hover {
+  background-color: rgb(190, 108, 121);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 780px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .game {
+    width: 80%;
+  }
+}
