@@ -1,0 +1,528 @@
+
+.container {
+  justify-content: center;
+  background: #dbe3b5;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del perfil */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #837eb1;
+}
+
+.profile h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.profile p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  color: #166534;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #e6f7ef;
+}
+
+/* Secciones */
+.section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e4e7c9;
+  border-radius: 8px;
+}
+
+.section h4 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section h4 i {
+  color: #166534;
+}
+
+/* Opciones */
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.option label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2b683f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Botón Agregar */
+.add-btn {
+  background: #2b683f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #1e4d2e;
+  transform: translateY(-2px);
+}
+
+/* Contacto */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #bbc19a;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.contact img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact p {
+  margin: 3px 0;
+}
+
+.contact small {
+  color: #555;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.no-contacts {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 15px;
+}
+
+/* Botones de guardar */
+.btn-save {
+  background-color: #166534;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-save:hover {
+  background-color: #0e4429;
+  transform: translateY(-2px);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #837eb1;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+
+.centro {
+  width: 80%; /* Tamaño reducido para pantallas grandes */
+  margin: 0 auto; /* Centrado en pantallas grandes */
+  padding: 20px;
+}
+
+/* Modo de alto contraste */
+.high-contrast {
+  background: black;
+  color: yellow;
+}
+
+.high-contrast .container,
+.high-contrast .section,
+.high-contrast header,
+.high-contrast footer {
+  background: black;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.high-contrast .option,
+.high-contrast .contact {
+  background: #222;
+  border: 1px solid yellow;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background: black;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.high-contrast .btn-save,
+.high-contrast .add-btn,
+.high-contrast .edit-btn {
+  background: #333;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.contacto2 {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #f5f5f5;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #166534;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0e4429;
+  transform: translateY(-2px);
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.success-message:before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-message:before {
+  content: "\f057";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Mejoras para inputs */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #166534;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #166534;
+  cursor: pointer;
+}
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  min-width: 150px;
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .option {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .switch {
+    margin-top: 5px;
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .delete-btn {
+    top: 10px;
+    right: 10px;
+  }
+}
